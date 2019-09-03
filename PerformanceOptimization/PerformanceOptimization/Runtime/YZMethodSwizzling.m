@@ -11,7 +11,7 @@
 
 @implementation YZMethodSwizzling
 
-- (void)yz_swizzlingInstance:(Class)cls originalSelector:(SEL)original swizzledSelecotr:(SEL)swizzled {
++ (void)yz_swizzlingInstance:(Class)cls originalSelector:(SEL)original swizzledSelecotr:(SEL)swizzled {
     Method originalMethod = class_getInstanceMethod(cls, original);
     Method swizzledMethod = class_getInstanceMethod(cls, swizzled);
     BOOL didAddMethod = class_addMethod(cls, swizzled, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
@@ -22,7 +22,7 @@
     }
 }
 
-- (void)yz_swizzlingClass:(Class)cls originalSelector:(SEL)original swizzledSelecotr:(SEL)swizzled {
++ (void)yz_swizzlingClass:(Class)cls originalSelector:(SEL)original swizzledSelecotr:(SEL)swizzled {
     Method originalMethod = class_getClassMethod(cls, original);
     Method swizzledMethod = class_getClassMethod(cls, swizzled);
     BOOL didAddMethod = class_addMethod(cls, swizzled, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));

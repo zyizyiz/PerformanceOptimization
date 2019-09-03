@@ -15,6 +15,10 @@
 		567D172F231E03AC00E6B0E2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 567D172E231E03AC00E6B0E2 /* main.m */; };
 		567D1739231E03AC00E6B0E2 /* PerformanceOptimizationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 567D1738231E03AC00E6B0E2 /* PerformanceOptimizationTests.m */; };
 		567D1744231E03AD00E6B0E2 /* PerformanceOptimizationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 567D1743231E03AD00E6B0E2 /* PerformanceOptimizationUITests.m */; };
+		567D1754231E053E00E6B0E2 /* NSObject+NSZombie.m in Sources */ = {isa = PBXBuildFile; fileRef = 567D1753231E053E00E6B0E2 /* NSObject+NSZombie.m */; };
+		567D1759231E079500E6B0E2 /* YZMethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 567D1758231E079500E6B0E2 /* YZMethodSwizzling.m */; };
+		567D175D231E40BB00E6B0E2 /* YZZombie.m in Sources */ = {isa = PBXBuildFile; fileRef = 567D175C231E40BB00E6B0E2 /* YZZombie.m */; };
+		567D1761231E41B200E6B0E2 /* YZZombieTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 567D1760231E41B200E6B0E2 /* YZZombieTest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,14 @@
 		567D173F231E03AD00E6B0E2 /* PerformanceOptimizationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerformanceOptimizationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		567D1743231E03AD00E6B0E2 /* PerformanceOptimizationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerformanceOptimizationUITests.m; sourceTree = "<group>"; };
 		567D1745231E03AD00E6B0E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		567D1752231E053E00E6B0E2 /* NSObject+NSZombie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+NSZombie.h"; sourceTree = "<group>"; };
+		567D1753231E053E00E6B0E2 /* NSObject+NSZombie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NSZombie.m"; sourceTree = "<group>"; };
+		567D1757231E079500E6B0E2 /* YZMethodSwizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZMethodSwizzling.h; sourceTree = "<group>"; };
+		567D1758231E079500E6B0E2 /* YZMethodSwizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZMethodSwizzling.m; sourceTree = "<group>"; };
+		567D175B231E40BB00E6B0E2 /* YZZombie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZZombie.h; sourceTree = "<group>"; };
+		567D175C231E40BB00E6B0E2 /* YZZombie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZZombie.m; sourceTree = "<group>"; };
+		567D175F231E41B200E6B0E2 /* YZZombieTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZZombieTest.h; sourceTree = "<group>"; };
+		567D1760231E41B200E6B0E2 /* YZZombieTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZZombieTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +113,8 @@
 		567D171E231E03AC00E6B0E2 /* PerformanceOptimization */ = {
 			isa = PBXGroup;
 			children = (
+				567D1756231E075F00E6B0E2 /* Runtime */,
+				567D1751231E051800E6B0E2 /* Zombie */,
 				567D171F231E03AC00E6B0E2 /* AppDelegate.h */,
 				567D1720231E03AC00E6B0E2 /* AppDelegate.m */,
 				567D1722231E03AC00E6B0E2 /* ViewController.h */,
@@ -130,6 +144,36 @@
 				567D1745231E03AD00E6B0E2 /* Info.plist */,
 			);
 			path = PerformanceOptimizationUITests;
+			sourceTree = "<group>";
+		};
+		567D1751231E051800E6B0E2 /* Zombie */ = {
+			isa = PBXGroup;
+			children = (
+				567D175E231E419F00E6B0E2 /* Test */,
+				567D1752231E053E00E6B0E2 /* NSObject+NSZombie.h */,
+				567D1753231E053E00E6B0E2 /* NSObject+NSZombie.m */,
+				567D175B231E40BB00E6B0E2 /* YZZombie.h */,
+				567D175C231E40BB00E6B0E2 /* YZZombie.m */,
+			);
+			path = Zombie;
+			sourceTree = "<group>";
+		};
+		567D1756231E075F00E6B0E2 /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				567D1757231E079500E6B0E2 /* YZMethodSwizzling.h */,
+				567D1758231E079500E6B0E2 /* YZMethodSwizzling.m */,
+			);
+			path = Runtime;
+			sourceTree = "<group>";
+		};
+		567D175E231E419F00E6B0E2 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				567D175F231E41B200E6B0E2 /* YZZombieTest.h */,
+				567D1760231E41B200E6B0E2 /* YZZombieTest.m */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +238,7 @@
 		567D1714231E03AB00E6B0E2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = YZ;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "张义镇";
 				TargetAttributes = {
@@ -262,8 +307,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				567D1761231E41B200E6B0E2 /* YZZombieTest.m in Sources */,
+				567D1754231E053E00E6B0E2 /* NSObject+NSZombie.m in Sources */,
 				567D1724231E03AC00E6B0E2 /* ViewController.m in Sources */,
+				567D1759231E079500E6B0E2 /* YZMethodSwizzling.m in Sources */,
 				567D172F231E03AC00E6B0E2 /* main.m in Sources */,
+				567D175D231E40BB00E6B0E2 /* YZZombie.m in Sources */,
 				567D1721231E03AC00E6B0E2 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,6 +484,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PerformanceOptimization/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -451,6 +501,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PerformanceOptimization/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

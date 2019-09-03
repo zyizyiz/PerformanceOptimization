@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param original original selector
  @param swizzled swizzled selector
  */
-- (void)yz_swizzlingInstance:(Class)cls originalSelector:(SEL)original swizzledSelecotr:(SEL)swizzled;
++ (void)yz_swizzlingInstance:(Class)cls originalSelector:(SEL)original swizzledSelecotr:(SEL)swizzled;
 
 
 /**
@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param original original selector
  @param swizzled swizzled selector
  */
-- (void)yz_swizzlingClass:(Class)cls originalSelector:(SEL)original swizzledSelecotr:(SEL)swizzled;
++ (void)yz_swizzlingClass:(Class)cls originalSelector:(SEL)original swizzledSelecotr:(SEL)swizzled;
 
 @end
 
